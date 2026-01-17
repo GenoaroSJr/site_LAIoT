@@ -60,7 +60,7 @@ export default {
         PublicationsHeaderComponent
     },
     created() {
-        this.$router.push({ name: 'Publications', params: { tipo: 'vinteDois' } });
+        this.$router.push({ name: 'Publications', params: { tipo: 'vinteCinco' } });
     }
 }
 </script>

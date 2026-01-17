@@ -32,7 +32,7 @@
 export default {
     name: 'TeamHeaderComponent',
     data: () => ({
-        img: 'assets/imgs/equipe/equipe.jpeg'
+        img: 'assets/imgs/equipe/equipe2.png'
     })
 }
 </script>

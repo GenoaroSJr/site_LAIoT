@@ -60,8 +60,8 @@ export default createStore({
         {
           "indice": 8,
           "nome": "Marciano de Lima Medeiros",
-          "texto": "Licenciou-se em Física pela Universidade Regional do Cariri (URCA), onde atuou principalmente em Mecânica Quântica no Espaço de Fases com ênfase no formalismo de Weyl-Wigner-Groenewold-Moyal, e em Física Matemática com ênfase em Cálculo das Variações, envolvendo problemas variacionais da Mecânica Clássica e Teoria Clássica de Campos. Atuou como monitor voluntário em disciplinas de Mecânica, Eletricidade e Magnetismo para Engenharia e foi professor substituto de Matemática na escola de ensino particular Paraíso da Cultura em Crato-CE. Atualmente é aluno de mestrado no Programa de Pós-Graduação em Engenharia Elétrica da UNIFEI, Itajubá, Minas Gerais, atuando principalmente em Óptica Integrada, Nanofotônica de Silício, Eletromagnetismo aplicado e fibras ópticas especiais.",
-          "lattes": "http://lattes.cnpq.br/2628692420856172",
+          "texto": "Doutorado em andamento pelo Programa de Pós-Graduação em Engenharia Elétrica da Universidade Federal de Itajubá (UNIFEI). Graduado em Física pela Universidade Regional do Cariri (URCA), em Juazeiro do Norte - CE, onde atuou principalmente em Mecânica Quântica e Física Matemática, com ênfase no formalismo de Weyl-Wigner-Groenewold-Moyal e em Cálculo de Variações. É mestre em Ciências em Engenharia Elétrica pelo Programa de Pós-Graduação em Engenharia Elétrica da UNIFEI. Atualmente, atua principalmente na área de Nanofotônica em Silício, com ênfase (i) na fabricação e caracterização de vidros teluritos dopados com terras raras para aplicações fotônicas e (ii) na modelagem numérica de amplificadores ópticos on-chip baseados em nanoguias tridopados (Er³⁺/Yb³⁺/Tm³⁺), nanoacopladores de Bragg, nanoguias integrados em SOI, fibras de cristal fotônico, teoria de modos acoplados e acoplamento óptico fibra-chip.",
+          "lattes": "https://lattes.cnpq.br/2628692420856172",
           "img": "assets/imgs/equipe/marciano.jpg"
         },
         {

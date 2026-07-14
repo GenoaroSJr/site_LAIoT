@@ -1,0 +1,158 @@
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: white;
+  color: var(--color-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-primary:hover { background: var(--color-bg-blue); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  background: transparent;
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+.btn-dark {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.btn-dark:hover { background: var(--color-tag-text); }
+
+/* ── Cards ── */
+.card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: box-shadow var(--transition-mid), transform var(--transition-mid);
+}
+.card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+
+.card-dark {
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Topic Cards (Research subtopics) ── */
+.topic-card {
+  padding: 20px 18px;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+.topic-card--white { background: white; }
+.topic-card .topic-title { font-size: 0.88rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
+.topic-card .topic-desc  { font-size: 0.8rem; color: var(--color-text-subtle); line-height: 1.6; }
+
+/* ── Member Card ── */
+.member-card {
+  background: white;
+  border: 1px solid #E0E8F4;
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: box-shadow var(--transition-mid);
+}
+.member-card:hover { box-shadow: 0 4px 20px rgba(0,51,102,0.08); }
+.member-avatar {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.member-avatar span {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* ── Section Layouts ── */
+.section-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.section-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.section-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ── Dot grid bg ── */
+.dot-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.065) 1.5px, transparent 1.5px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+/* ── Lang toggle button ── */
+.lang-toggle {
+  padding: 6px 15px;
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: white;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.65); }
+
+@media (max-width: 900px) {
+  .section-grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  .section-grid-3 { grid-template-columns: 1fr 1fr; }
+  .section-grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .section-grid-3 { grid-template-columns: 1fr; }
+  .section-grid-4 { grid-template-columns: 1fr; }
+}

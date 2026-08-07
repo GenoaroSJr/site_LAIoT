@@ -85,6 +85,12 @@ export default {
           lattes: 'http://lattes.cnpq.br/5972583538628463',
           img: 'assets/imgs/equipe/christianFoto.jpg',
         },
+        {
+          name: 'Bruno Faus Salussolia',
+          bio: 'Graduado em Engenharia Eletrônica pela Universidade Federal de Itajubá. Bolsista FAPEMIG no Programa de Pós-Graduação em Engenharia Elétrica pela Universidade Federal de Itajubá.',
+          lattes: 'http://lattes.cnpq.br/2122525022134762',
+          img: 'assets/imgs/equipe/BrunoFausSalussolia.jpeg',
+        },
       ],
     },
     {
@@ -115,18 +121,6 @@ export default {
           lattes: 'Lattes não disponível',
           img: 'assets/imgs/equipe/RafaelaSilva.png',
         },
-        {
-          name: 'Beatriz Aparecida Pereira Silva',
-          bio: 'Descrição não disponível',
-          lattes: 'Lattes não disponível',
-          img: 'assets/imgs/equipe/BeatrizSilva.png',
-        },
-        {
-          name: 'Tamiris Midori Nakano',
-          bio: 'Descrição não disponível',
-          lattes: 'Lattes não disponível',
-          img: 'assets/imgs/equipe/TamirisNakano.png',
-        },
       ],
     },
     {
@@ -153,7 +147,7 @@ export default {
         },
         {
           name: 'Jean Wellington de Souza',
-          bio: 'Atualmente cursando Mestrado em Engenharia Elétrica com ênfase em Microeletrônica na Universidade Federal de Itajubá (UNIFEI) é graduado em Engenharia Elétrica pelo Centro Universitário de Itajubá - FEPI (2016 - 2020), possui experiência como desenvolvedor de soluções e aplicações de Internet das Coisas atuando principalmente na área de monitoramento de energia e aquisição de dados.',
+          bio: 'Mestre em Engenharia Elétrica pela Universidade Federal de Itajubá - UNIFEI (2021 - 2024), graduado em Engenharia Elétrica pelo Centro Universitário de Itajubá - FEPI (2016-2020), atualmente Desenvolvedor de firmware embarcado na CCK Automação e aluno do programa de capacitação CI Digital do governo federal. Possui experiência no desenvolvimento de soluções e aplicações de Internet das Coisas (IoT), com foco em monitoramento de energia e aquisição de dados. Atua na área de sistemas embarcados para gerenciamento e medição de energia elétrica, incluindo o desenvolvimento de firmware e integração de protocolos de comunicação para análise, supervisão e controle de sistemas de medição energética.',
           lattes: 'http://lattes.cnpq.br/3095597034461611',
           img: 'assets/imgs/equipe/jean.jpg',
         },

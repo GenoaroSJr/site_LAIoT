@@ -12,8 +12,6 @@ export default {
     publications: 'Publicações',
     theses: 'Teses e Dissertações',
     projects: 'Projetos',
-    osa: 'Optica',
-    news: 'Notícias',
     gallery: 'Galeria',
     contact: 'Contato',
     langToggle: 'EN',
@@ -65,8 +63,6 @@ export default {
   /* ── Home Hero ── */
   home: {
     statsLabel: 'LabTel em números',
-    news: 'Últimas Notícias',
-    newsSub: 'Acompanhe os últimas eventos, publicações e atividades do laboratório.',
     resTitle: 'Áreas de Pesquisa',
     resSub: 'Cinco linhas de investigação em eletromagnetismo, cobrindo da nanofotônica às redes celulares de quinta geração.',
     ctaTitle: 'Interessado em colaborar?',
@@ -121,29 +117,6 @@ export default {
         tags: ['IoT', 'LoRaWan', 'Sigfox'],
       },
     ],
-    latestNews: [
-      {
-        date: 'Set 2022',
-        tag: 'Evento',
-        title: 'III Workshop LabTel-LAIoT',
-        desc: 'Óptica, Fotônica e redes 5G: a integração e conectividade dos sistemas de telecomunicações.',
-        accent: '#003366',
-      },
-      {
-        date: 'Jun 2022',
-        tag: 'Publicação',
-        title: 'Pesquisa em Sistemas RoF Publicada no SBrT 2022',
-        desc: 'Trabalho sobre sistema RoF/BS-ILC com transmissor de múltiplos comprimentos de onda apresentado no SBrT.',
-        accent: '#1B6EDB',
-      },
-      {
-        date: 'Out 2021',
-        tag: 'Conferência',
-        title: 'Participação no ELOS 2021',
-        desc: 'Pesquisadores do LabTel apresentaram técnicas de fotônica de micro-ondas para sistemas 5G/6G.',
-        accent: '#2E86E8',
-      },
-    ],
   },
 
   /* ── Sobre ── */
@@ -162,8 +135,8 @@ export default {
     groupP1: 'Fundado no âmbito do IESTI na UNIFEI, o LabTel cresceu ao longo dos anos consolidando três grandes linhas de pesquisa: óptica e fotônica (incluindo Silicon Photonics), radiofrequência (com foco em RFID sem chip) e redes 5G com integração óptico-wireless.',
     groupP2: 'O laboratório é classificado como multiusuário, atendendo alunos de graduação e pós-graduação, pesquisadores visitantes e parceiros empresariais. Mantemos acordos de cooperação com instituições no Brasil e no exterior.',
     infraLabel: 'Infraestrutura',
-    infraTitle: 'Equipamentos & Instalações',
-    infraSub: 'Espaço de 100 m² equipado com instrumentação avançada para pesquisa experimental em óptica, RF e telecomunicações.',
+    infraTitle: 'Equipamentos do Laboratório de Pesquisa',
+    infraSub: 'Instrumentação disponível no LabTel para pesquisa experimental em óptica, radiofrequência e telecomunicações.',
     locationLabel: 'Localização',
     locationTitle: 'Como nos Encontrar',
     locInst: 'IESTI – Instituto de Engenharia de Sistemas e Tecnologia da Informação / UNIFEI',
@@ -174,14 +147,36 @@ export default {
       { value: '7+', label: 'Parceiros', color: '#2E86E8' },
       { value: 'IESTI', label: 'Instituto vinculado', color: '#003366' },
     ],
-    infraItems: [
-      { title: 'Óptica & Fotônica', desc: 'Bancadas para caracterização de dispositivos ópticos integrados e sistemas fotônicos.', iconRadius: '50%', color: '#003366' },
-      { title: 'Radiofrequência', desc: 'Instrumentação para medidas de sinais RF, antenas e dispositivos sem fio.', iconRadius: '2px', color: '#1B6EDB' },
-      { title: 'Telecomunicações 5G', desc: 'Equipamentos para pesquisa em sistemas Rádio sobre Fibra e fronthaul 5G.', iconRadius: '1px', color: '#2E86E8' },
-      { title: 'Simulação Computacional', desc: 'Servidores e estações para simulações de dispositivos ópticos e sistemas de comunicação.', iconRadius: '4px', color: '#003366' },
-      { title: 'Multiusuário', desc: 'Aberto a estudantes, pesquisadores externos e parceiros empresariais mediante solicitação.', iconRadius: '50%', color: '#1B6EDB' },
-      { title: 'Propriedades Ópticas', desc: 'Análise de propriedades ópticas de materiais e componentes para redes e sensores.', iconRadius: '2px', color: '#2E86E8' },
-    ],
+    equipamentos: {
+      headers: { equipamento: 'Equipamento', quantidade: 'Quantidade', empresa: 'Empresa', modelo: 'Modelo' },
+      items: [
+        { equipamento: 'Vector Network Analyzer', quantidade: 1, empresa: 'Deviser', modelo: 'NA7100A' },
+        { equipamento: 'Spectrum Rider FPH', quantidade: 1, empresa: 'Rohde & Schwarz', modelo: 'Model 13' },
+        { equipamento: 'Field Fox VNA', quantidade: 1, empresa: 'Keysight', modelo: 'N9923A' },
+        { equipamento: 'Vector Signal Generator', quantidade: 1, empresa: 'Anritsu', modelo: 'MG3710A' },
+        { equipamento: 'Oscilloscope – Digital Real Time', quantidade: 1, empresa: 'Tektronix', modelo: 'TDS 220' },
+        { equipamento: 'Wattmeter', quantidade: 1, empresa: 'Bird', modelo: '43' },
+        { equipamento: 'Switching Power Supply', quantidade: 2, empresa: 'ICEL Manaus', modelo: 'PS-3005' },
+        { equipamento: 'Oscilloscope Digital Storage', quantidade: 1, empresa: 'Agilent Technologies', modelo: 'DSO-X-2002A' },
+        { equipamento: 'Laboratory DC Power Supply', quantidade: 1, empresa: 'ICEL Manaus', modelo: 'PS-5000' },
+        { equipamento: 'Digital Soldering Station', quantidade: 1, empresa: 'Pace', modelo: 'ST 50' },
+        { equipamento: 'Digital Storage Oscilloscope', quantidade: 1, empresa: 'Atten', modelo: 'Ads1042c' },
+        { equipamento: 'Mesa Óptica', quantidade: 1, empresa: 'ThorLabs', modelo: 'T1225QK' },
+        { equipamento: 'Conjunto Suporte Rígido', quantidade: 1, empresa: 'ThorLabs', modelo: 'PTL803' },
+        { equipamento: 'Laser Diode Controller', quantidade: 1, empresa: 'ThorLabs', modelo: 'LDC 205 C' },
+        { equipamento: 'Temperature Controller', quantidade: 1, empresa: 'ThorLabs', modelo: 'TED 200 C' },
+        { equipamento: 'Optical Power Meter', quantidade: 1, empresa: 'ThorLabs', modelo: 'PM 400' },
+        { equipamento: 'Fiber Microscope', quantidade: 1, empresa: 'ThorLabs', modelo: 'FS 201' },
+        { equipamento: 'Sistema de Laser HeNe', quantidade: 1, empresa: 'ThorLabs', modelo: 'HNL020L' },
+        { equipamento: 'Optical Spectrum Analyzer', quantidade: 1, empresa: 'Anritsu', modelo: 'MS9740B' },
+        { equipamento: 'Impressora 3D', quantidade: 1, empresa: 'GTMax3D', modelo: 'A2V2' },
+        { equipamento: 'Proto-Board – Design Station', quantidade: 1, empresa: 'Global Specialties', modelo: 'PB-503-C' },
+        { equipamento: 'Computadores', quantidade: 9, empresa: '-', modelo: '-' },
+        { equipamento: 'Workstation', quantidade: 3, empresa: '-', modelo: 'HP Z2 Tower G4' },
+        { equipamento: 'Televisão 50”', quantidade: 1, empresa: 'AOC', modelo: 'LE50U7970' },
+        { equipamento: 'Retroprojetor', quantidade: 1, empresa: 'Epson', modelo: 'X39 3LCD' },
+      ],
+    },
   },
 
   /* ── Pesquisa ── */
@@ -218,43 +213,6 @@ export default {
     ],
     funders: ['CNPq', 'CAPES', 'FAPEMIG'],
     partners: ['Honeywell', 'OneRF', 'Advantech', 'Mackenzie', 'USP-SC', 'UFSCar', 'INATEL'],
-  },
-
-  /* ── OSA ── */
-  osa: {
-    pageTitle: 'Optica Student Chapter',
-    pageSub: 'Capítulo estudantil da Optica Society (antiga OSA) na UNIFEI, promovendo ciência e conexões globais.',
-    aboutLabel: 'Sobre o Capítulo',
-    aboutTitle: 'Fotônica & Conexão Internacional',
-    aboutP1: 'O LabTel abriga o Capítulo Estudantil da Optica (anteriormente conhecida como Optical Society of America – OSA) na Universidade Federal de Itajubá. A Optica é a principal sociedade científica mundial dedicada à óptica e fotônica.',
-    aboutP2: 'O capítulo promove o desenvolvimento científico e profissional de estudantes de graduação e pós-graduação interessados em fotônica, lasers, sensores ópticos e comunicações ópticas. Através de eventos, workshops e conexões internacionais, estreitamos laços com a comunidade global de pesquisa.',
-    osaLink: 'Visitar optica.org →',
-    activitiesLabel: 'Atividades & Eventos',
-    joinLabel: 'Participe',
-    joinTitle: 'Como se Juntar ao Capítulo',
-    joinText: 'Estudantes de graduação e pós-graduação da UNIFEI interessados em óptica, fotônica e telecomunicações são bem-vindos. O capítulo é aberto e gratuito para membros da Optica Society.',
-    joinContact: 'Contato:',
-    activities: [
-      { title: 'Workshops Técnicos', desc: 'Palestras e hands-on sobre tópicos de ponta em fotônica, Silicon Photonics e redes ópticas.' },
-      { title: 'Seminários Científicos', desc: 'Apresentação de trabalhos de pesquisa pelos membros do laboratório e pesquisadores convidados.' },
-      { title: 'Eventos de Networking', desc: 'Encontros informais para conectar estudantes, pesquisadores e profissionais da indústria.' },
-      { title: 'Visitas Técnicas', desc: 'Visitas a empresas e centros de pesquisa parceiros para conhecer aplicações reais.' },
-      { title: 'Publicações e Divulgação', desc: 'Produção de conteúdo científico e participação em congressos da Optica Society.' },
-    ],
-  },
-
-  /* ── Notícias ── */
-  noticias: {
-    pageTitle: 'Notícias & Eventos',
-    pageSub: 'Acompanhe as últimas atividades, publicações e eventos do LabTel.',
-    news: [
-      { date: 'Set 2022', tag: 'Evento', title: 'III Workshop LabTel-LAIoT', desc: 'Óptica, Fotônica e redes 5G: a integração e conectividade dos sistemas de telecomunicações. Evento realizado no auditório da UNIFEI.', accent: '#003366' },
-      { date: 'Jun 2022', tag: 'Publicação', title: 'Pesquisa em Sistemas RoF Publicada no SBrT 2022', desc: 'Trabalho sobre sistema RoF/BS-ILC com transmissor de múltiplos comprimentos de onda baseado em óptica integrada apresentado no Simpósio Brasileiro de Telecomunicações.', accent: '#1B6EDB' },
-      { date: 'Out 2021', tag: 'Conferência', title: 'Participação no ELOS 2021', desc: 'Pesquisadores do LabTel apresentaram técnicas de fotônica de micro-ondas para sistemas 5G/6G fibra-wireless no European Lasers, Photonics and Optics Technologies Summit.', accent: '#2E86E8' },
-      { date: 'Ago 2021', tag: 'Defesa', title: 'Defesa de Dissertação de Mestrado', desc: 'Aluno do LabTel defende dissertação sobre sistemas RFID sem chip para aplicações de sensoriamento em ambientes IoT.', accent: '#003366' },
-      { date: 'Mar 2021', tag: 'Palestra', title: 'Pesquisas em 5G no Mackenzie', desc: 'O Prof. Spadoti apresentou resultados recentes de pesquisa sobre 5G no ciclo de seminários da Escola de Engenharia Mackenzie.', accent: '#1B6EDB' },
-      { date: 'Nov 2020', tag: 'Conferência', title: 'Apresentação no IWOC 2020', desc: 'Pesquisa sobre redes óptico-wireless foi apresentada no Inefor Workshop on Optical Communications, com destaque para técnicas de RoF.', accent: '#2E86E8' },
-    ],
   },
 
   /* ── Galeria ── */

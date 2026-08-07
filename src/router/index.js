@@ -8,8 +8,6 @@ const routes = [
   { path: '/publicacoes',  component: () => import('../views/PublicacoesView.vue') },
   { path: '/teses',        component: () => import('../views/TesesView.vue') },
   { path: '/projetos',     component: () => import('../views/ProjetosView.vue') },
-  { path: '/osa',          component: () => import('../views/OsaView.vue') },
-  { path: '/noticias',     component: () => import('../views/NoticiasView.vue') },
   { path: '/galeria',      component: () => import('../views/GaleriaView.vue') },
   { path: '/contato',      component: () => import('../views/ContatoView.vue') },
 ]

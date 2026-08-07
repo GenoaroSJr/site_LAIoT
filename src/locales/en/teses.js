@@ -9,8 +9,68 @@ export default {
     ongoing: {
       theses: [
         {
+          author: 'Vitória Jacomelli Baratella',
+          title: 'Long-distance data transmission in challenging propagation environments (working title)',
+          year: 'Started: 2025',
+          type: 'Doctoral Thesis (Electrical Engineering)',
+          institution:
+            'Federal University of Itajubá (UNIFEI), Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)',
+          advisor: 'Advisor',
+        },
+        {
+          author: 'Marciano de Lima Medeiros',
+          title: 'Hybrid optical amplifiers for the C-L optical bands (working title)',
+          year: 'Started: 2025',
+          type: 'Doctoral Thesis (Electrical Engineering)',
+          institution:
+            'Federal University of Itajubá (UNIFEI), Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)',
+          advisor: 'Advisor',
+        },
+        {
+          author: 'Laert Calil Junior',
+          title:
+            'Application of TV White Spaces technology in the radio spectrum monitoring of the Brazilian National Telecommunications Agency - Anatel',
+          year: 'Started: 2024',
+          type: 'Doctoral Thesis (Electrical Engineering)',
+          institution: 'Federal University of Itajubá (UNIFEI)',
+          advisor: 'Advisor',
+        },
+        {
+          author: 'Lucas de Oliveira Veiga',
+          title: 'Smart antennas in millimeter waves (working title)',
+          year: 'Started: 2021',
+          type: 'Doctoral Thesis (Electrical Engineering)',
+          institution:
+            'Federal University of Itajubá (UNIFEI), Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)',
+          advisor: 'Co-advisor',
+        },
+      ],
+      dissertations: [
+        {
+          author: 'Christian Henrique de Oliveira Lamin',
+          title:
+            'Development of a technology for real-time monitoring of geomagnetically induced currents in high-voltage substations',
+          year: 'Started: 2025',
+          type: "Master's Dissertation (Electrical Engineering)",
+          institution:
+            'Federal University of Itajubá (UNIFEI), Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)',
+          advisor: 'Advisor',
+        },
+        {
+          author: 'Anderson Guerra de Almeida',
+          title: 'Development of a low-cost IoT telemetry system',
+          year: 'Started: 2023',
+          type: "Master's Dissertation (Electrical Engineering)",
+          institution: 'Federal University of Itajubá (UNIFEI)',
+          advisor: 'Advisor',
+        },
+      ],
+    },
+    completed: {
+      theses: [
+        {
           author: 'Afonso José de Faria',
-          title: 'Proposta de organização das Redes 5G baseada em Eficiência Energética (Título Provisório)',
+          title: 'Proposta de organização das Redes 5G baseada em Eficiência Energética',
           year: '2018',
           type: 'Doctoral Thesis (Electrical Engineering)',
           institution: 'Federal University of Itajubá (UNIFEI)',
@@ -32,42 +92,6 @@ export default {
           institution: 'Federal University of Itajubá (UNIFEI)',
           advisor: 'Advisor',
         },
-      ],
-      dissertations: [
-        {
-          author: 'MIGUEL MARQUES DE PAIVA ESPER',
-          title: '(PROVISÓRIO) - Sistema de medição automática em redes sem fio para Internet das Coisas (IoT)',
-          year: '2020',
-          type: "Master's Dissertation (Electrical Engineering)",
-          institution:
-            'Federal University of Itajubá (UNIFEI), Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)',
-          advisor: 'Advisor',
-        },
-        {
-          author: 'Marciano de Lima Medeiros',
-          title: '(PROVISÓRIO) – Acoplamento óptico entre fibras de cristal fotônico e nanoguias de silício',
-          year: '',
-          type: 'Dissertation',
-          institution: '',
-        },
-        {
-          author: 'Jean Wellington de Souza',
-          title: 'Solução integradora de monitoramento por imagem com processamento de borda',
-          year: '',
-          type: 'Dissertation',
-          institution: '',
-        },
-        {
-          author: 'Fábio Silva Borges',
-          title: 'Antenas de alto ganho para redes 6G (título provisório)',
-          year: '',
-          type: 'Dissertation',
-          institution: '',
-        },
-      ],
-    },
-    completed: {
-      theses: [
         {
           author: 'Daniely Gomes Silva',
           title:
@@ -155,6 +179,36 @@ export default {
         },
       ],
       dissertations: [
+        {
+          author: 'MIGUEL MARQUES DE PAIVA ESPER',
+          title: 'Sistema de medição automática em redes sem fio para Internet das Coisas (IoT)',
+          year: '2020',
+          type: "Master's Dissertation (Electrical Engineering)",
+          institution:
+            'Federal University of Itajubá (UNIFEI), Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)',
+          advisor: 'Advisor',
+        },
+        {
+          author: 'Marciano de Lima Medeiros',
+          title: 'Acoplamento óptico entre fibras de cristal fotônico e nanoguias de silício',
+          year: '',
+          type: 'Dissertation',
+          institution: '',
+        },
+        {
+          author: 'Jean Wellington de Souza',
+          title: 'Solução integradora de monitoramento por imagem com processamento de borda',
+          year: '',
+          type: 'Dissertation',
+          institution: '',
+        },
+        {
+          author: 'Fábio Silva Borges',
+          title: 'Antenas de alto ganho para redes 6G',
+          year: '',
+          type: 'Dissertation',
+          institution: '',
+        },
         {
           author: 'TALES HENRIQUE CARVALHO',
           title:

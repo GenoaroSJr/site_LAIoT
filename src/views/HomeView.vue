@@ -38,30 +38,6 @@
     </div>
   </section>
 
-  <!-- Latest News -->
-  <section class="section section--soft">
-    <div class="container">
-      <SectionHeader :title="h.news" :sub="h.newsSub" narrow />
-      <div class="section-grid-3">
-        <div v-for="item in h.latestNews" :key="item.title" class="news-card">
-          <div class="news-card__accent" :style="{ background: item.accent }"></div>
-          <div class="news-card__body">
-            <div class="news-card__meta">
-              <span class="news-card__date">{{ item.date }}</span>
-              <span class="news-card__dot"></span>
-              <span class="tag">{{ item.tag }}</span>
-            </div>
-            <h3 class="news-card__title">{{ item.title }}</h3>
-            <p class="news-card__desc">{{ item.desc }}</p>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 32px; text-align: center;">
-        <RouterLink to="/noticias" class="btn-dark">{{ t.nav.news }} →</RouterLink>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA -->
   <section class="cta-section">
     <div class="dot-grid-bg"></div>
@@ -86,7 +62,6 @@ import HeroCarousel from '../components/HeroCarousel.vue'
 import SectionHeader from '../components/SectionHeader.vue'
 
 const lang = useLangStore()
-const t = computed(() => lang.t)
 const h = computed(() => lang.t.home)
 </script>
 
@@ -146,32 +121,6 @@ const h = computed(() => lang.t.home)
 }
 .res-card__desc { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.7; flex: 1; }
 .res-card__tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-/* News */
-.news-card {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-.news-card:hover { box-shadow: var(--shadow-card-lg); transform: translateY(-3px); }
-.news-card__accent { height: 5px; }
-.news-card__body { padding: 22px; flex: 1; }
-.news-card__meta { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-.news-card__date { font-size: 0.7rem; font-weight: 700; color: var(--color-text-faint); letter-spacing: 0.08em; text-transform: uppercase; }
-.news-card__dot { width: 3px; height: 3px; border-radius: 50%; background: #C8D5E8; flex: none; }
-.news-card__title {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.42;
-  margin-bottom: 10px;
-}
-.news-card__desc { font-size: 0.855rem; color: var(--color-text-muted); line-height: 1.72; }
 
 /* CTA */
 .cta-section {

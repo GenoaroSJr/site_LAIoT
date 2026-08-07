@@ -48,12 +48,25 @@
   <section class="section section--white">
     <div class="container">
       <SectionHeader :label="s.infraLabel" :title="s.infraTitle" :sub="s.infraSub" narrow />
-      <div class="section-grid-3">
-        <div v-for="item in s.infraItems" :key="item.title" class="card">
-          <div class="infra-icon" :style="{ borderRadius: item.iconRadius }"></div>
-          <div class="infra-card__title">{{ item.title }}</div>
-          <div class="infra-card__desc">{{ item.desc }}</div>
-        </div>
+      <div class="equip-table-wrap">
+        <table class="equip-table">
+          <thead>
+            <tr>
+              <th>{{ s.equipamentos.headers.equipamento }}</th>
+              <th>{{ s.equipamentos.headers.quantidade }}</th>
+              <th>{{ s.equipamentos.headers.empresa }}</th>
+              <th>{{ s.equipamentos.headers.modelo }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, i) in s.equipamentos.items" :key="i">
+              <td>{{ item.equipamento }}</td>
+              <td>{{ item.quantidade }}</td>
+              <td>{{ item.empresa }}</td>
+              <td>{{ item.modelo }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -180,23 +193,37 @@ const s = computed(() => lang.t.sobre)
 }
 .stat-card__label { font-size: 0.78rem; color: var(--color-text-subtle); font-weight: 500; line-height: 1.4; }
 
-.infra-icon {
-  width: 40px; height: 40px;
-  background: #E8F0FF;
+.equip-table-wrap {
+  margin-top: 32px;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 16px;
-  position: relative;
+  background: white;
 }
-.infra-icon::after {
-  content: '';
-  position: absolute;
-  width: 16px; height: 16px;
-  background: var(--color-primary);
-  border-radius: inherit;
+.equip-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
 }
-.infra-card__title { font-size: 0.95rem; font-weight: 700; color: var(--color-text); margin-bottom: 8px; }
-.infra-card__desc { font-size: 0.84rem; color: var(--color-text-subtle); line-height: 1.65; }
+.equip-table th {
+  text-align: left;
+  padding: 14px 20px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-subtle);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+.equip-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #EAF0FA;
+  color: var(--color-text);
+}
+.equip-table tbody tr:last-child td { border-bottom: none; }
+.equip-table tbody tr:hover { background: #FAFBFD; }
 
 .contact-list { display: flex; flex-direction: column; gap: 18px; }
 .contact-list__item { display: flex; gap: 14px; align-items: flex-start; }

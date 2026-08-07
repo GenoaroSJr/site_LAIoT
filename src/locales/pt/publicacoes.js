@@ -11,6 +11,24 @@ export default {
   typeJour: 'Revista',
   pubs: [
     {
+      year: '2026',
+      title:
+        'Genetic Algorithm-Based Pixelated Reflectarray for Applications in Non-Terrestrial Networks.',
+      doi: '10.1109/ACCESS.2026.3711511',
+      venue: 'IEEE ACCESS',
+      authors:
+        'VEIGA, LUCAS DE OLIVEIRA ; SPADOTI, DANILO HENRIQUE ; CERQUEIRA S. JR., ARISMAR ; BORGES, RAMON MAIA',
+      type: 'jour',
+    },
+    {
+      year: '2026',
+      title: 'A Broader Survey on 6G Radio Resource Management.',
+      venue: 'SENSORS, v. 26, p. 2497',
+      authors:
+        'DE FARIA, AFONSO JOSÉ ; BRITO, JOSÉ MARCOS CÂMARA ; SPADOTI, DANILO HENRIQUE ; BORGES, RAMON MAIA',
+      type: 'jour',
+    },
+    {
       year: '2025',
       title:
         'Reconfigurable NIR-emission gain via thermal control in multimode tri-doped tellurite fiber.',
@@ -26,6 +44,41 @@ export default {
       authors:
         'PINTO, I. C. ; DELAROSBIL, J.-L. ; SPADOTI, D. H. ; RIVERA, V. A. G. ; MESSADDEQ, Y.',
       type: 'jour',
+    },
+    {
+      year: '2025',
+      title: 'Fuel Pressure Regulation via PID Control for High-Performance Automotive Systems.',
+      venue: 'XLIII Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT)',
+      authors:
+        'ALMEIDA, ANDERSON GUERRA ; MARTINS, THIAGO DE ÁVILA ; BARATELLA, VITÓRIA JACOMELLI ; COSTA, CAIO TÁCITO BORGES DA ; FARIA, DÉCIO R ; Spadoti, Danilo',
+      type: 'conf',
+    },
+    {
+      year: '2025',
+      title: 'Beyond the optical amplification on C-band via a short tri-doped tellurite fiber.',
+      venue: 'Frontiers in Optics + Laser Science, Denver',
+      authors:
+        'SPADOTI, DANILO H ; PINTO, I. C. ; RIVERA, V. A. G. ; MESSADDEQ, Y.',
+      type: 'conf',
+    },
+    {
+      year: '2025',
+      title:
+        'Optimization of the Electric Distribution Network with Photovoltaic Generation: Application of PSO for Reconfiguration in Intermittent Scenarios.',
+      venue:
+        '2025 IEEE 16th Latin America Symposium on Circuits and Systems (LASCAS), Bento Gonçalves',
+      authors:
+        'CA, E. ; GOMES, Y. ; BANDIRI, S. Y. M. ; SPADOTI, DANILO H ; MARTINS, R. ; T.C. Pimenta',
+      type: 'conf',
+    },
+    {
+      year: '2025',
+      title:
+        'Geolocation of Irregular Emissions Carried Out by TVWS Networks to Support Anatel.',
+      venue:
+        '2025 SBMO/IEEE MTT-S International Microwave and Optoelectronics Conference (IMOC), Campina Grande',
+      authors: 'CALIL JUNIOR, L. ; SPADOTI, DANILO HENRIQUE',
+      type: 'conf',
     },
     {
       year: '2024',
@@ -61,11 +114,92 @@ export default {
       type: 'jour',
     },
     {
+      year: '2024',
+      title: 'A Cost-Effective LoRa Gateway for Low-Density IoT Applications.',
+      venue:
+        'XLII Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT), Belém-PA',
+      authors:
+        'COSTA, CAIO TÁCITO BORGES DA ; ALMEIDA, ANDERSON GUERRA ; BARATELLA, VITÓRIA JACOMELLI ; Spadoti, Danilo',
+      type: 'conf',
+    },
+    {
+      year: '2024',
+      title: 'Low-cost configurable data acquisition module design for real-time monitoring.',
+      venue:
+        'XIV Conferência Nacional em Comunicações, Redes e Segurança da Informação, Natal-RN',
+      authors:
+        'ALMEIDA, A. G. ; BARATELLA, V. J. ; COSTA, C. T. B. ; SPADOTI, DANILO H',
+      type: 'conf',
+    },
+    {
+      year: '2024',
+      title:
+        'Arranjo Refletor Pixelado empregando Algoritmo Genético para aplicações em Redes NTN.',
+      venue:
+        'XIV Conferência Nacional em Comunicações, Redes e Segurança da Informação, Natal-RN',
+      authors: 'VEIGA, L. O. ; SPADOTI, DANILO H ; S. JR, A. C. ; BORGES, RAMON M.',
+      type: 'conf',
+    },
+    {
+      year: '2024',
+      title:
+        'Assessing the Impact of Jamming Attacks on LoRaWAN Devices: An Experimental Study.',
+      venue:
+        'XIV Conferência Nacional em Comunicações, Redes e Segurança da Informação, Natal-RN',
+      authors:
+        'BARATELLA, V. J. ; ALMEIDA, A. G. ; COSTA, C. T. B. ; FARIA, D. R. M. ; SPADOTI, DANILO H',
+      type: 'conf',
+    },
+    {
       year: '2023',
       title: 'Ultra-Wideband, Directive and Circular Polarization Lens Antennas for Future Communications.',
       venue: 'Journal of Communication and Information Systems (JCIS)',
       authors: 'DOS SANTOS, RENAN ; FRÉ, GABRIEL ; SPADOTI, DANILO',
       type: 'jour',
+    },
+    {
+      year: '2023',
+      title: 'Efficient Beamforming Using Magneto-Optical Metagratings for Terahertz Communications.',
+      venue: 'SBFoton International Optics and Photonics Conference (SBFoton IOPC), Campinas',
+      authors: 'CARVALHO, W. O. F. ; MEJIA-SALAZAR, J. R. ; Spadoti, Danilo H.',
+      type: 'conf',
+    },
+    {
+      year: '2023',
+      title: 'Ultra low power water level transmission system using LoRaWAN technology.',
+      venue:
+        'Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT), São José dos Campos',
+      authors:
+        'BARATELLA, V. J. ; ALMEIDA, A. G. ; COSTA, C. T. B. ; SILVA, B. C. ; SPADOTI, D. H.',
+      type: 'conf',
+    },
+    {
+      year: '2023',
+      title:
+        'Projeto de uma antena de microfita com duas portas altamente isoladas para aplicações Wi-Fi/5G.',
+      venue:
+        'Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT), São José dos Campos',
+      authors:
+        'BORGES, F. S. ; DOS SANTOS, RENAN ; PENCHEL, R. A. ; Spadoti, Danilo H.',
+      type: 'conf',
+    },
+    {
+      year: '2023',
+      title:
+        'Análise de Consumo Energético nas Transmissões NB-IoT de um Medidor Ultrassônico de Nível.',
+      venue:
+        'Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT), São José dos Campos',
+      authors:
+        'NOCE, L. A. ; FARIA, D. R. M. ; ABREU, REINALDO L. ; MACEDO, M. B. ; Spadoti, Danilo H.',
+      type: 'conf',
+    },
+    {
+      year: '2023',
+      title: 'A comparative study between LoRa and Zigbee transmission for racing car telemetry.',
+      venue:
+        'Simpósio Brasileiro de Telecomunicações e Processamento de Sinais (SBrT), São José dos Campos',
+      authors: 'ALMEIDA, A. G. ; BARATELLA, V. J. ; COSTA, C. T. B. ; Spadoti, Danilo H.',
+      type: 'conf',
     },
     {
       year: '2022',

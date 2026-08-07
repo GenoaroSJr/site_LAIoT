@@ -1,1 +1,0 @@
-var e=`/assets/carrousel_0-BKL04H3H.png`;export{e as t};

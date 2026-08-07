@@ -28,8 +28,6 @@ const links = computed(() => [
   { to: '/pesquisa',     label: t.value.nav.research },
   { to: '/equipe',       label: t.value.nav.team },
   { to: '/publicacoes',  label: t.value.nav.publications },
-  { to: '/osa',          label: t.value.nav.osa },
-  { to: '/noticias',     label: t.value.nav.news },
   { to: '/contato',      label: t.value.nav.contact },
 ])
 </script>

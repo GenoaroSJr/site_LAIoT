@@ -38,8 +38,6 @@ const links = computed(() => [
   { to: '/publicacoes',  label: lang.t.nav.publications },
   { to: '/teses',        label: lang.t.nav.theses },
   { to: '/projetos',     label: lang.t.nav.projects },
-  { to: '/osa',          label: lang.t.nav.osa },
-  { to: '/noticias',     label: lang.t.nav.news },
   { to: '/galeria',      label: lang.t.nav.gallery },
   { to: '/contato',      label: lang.t.nav.contact },
 ])

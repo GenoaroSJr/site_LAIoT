@@ -2,7 +2,6 @@
   <PageHeader :title="p.pageTitle" :sub="p.pageSub">
     <div class="res-quicklinks">
       <a v-for="line in p.lines" :key="line.id" :href="`#${line.id}`" class="res-quicklink">{{ line.navLabel }}</a>
-      <a href="#equipamentos" class="res-quicklink">{{ p.equipamentos.navLabel }}</a>
     </div>
   </PageHeader>
 
@@ -38,36 +37,6 @@
     </section>
     <div v-if="i < p.lines.length - 1" class="section-divider"></div>
   </template>
-
-  <div class="section-divider"></div>
-
-  <section id="equipamentos" :class="['section', p.lines.length % 2 === 0 ? 'section--white' : 'section--soft']">
-    <div class="container equip-container">
-      <span class="badge-label">{{ p.equipamentos.label }}</span>
-      <h2 class="serif-h2">{{ p.equipamentos.title }}</h2>
-      <p class="body-p equip-sub">{{ p.equipamentos.sub }}</p>
-      <div class="equip-table-wrap">
-        <table class="equip-table">
-          <thead>
-            <tr>
-              <th>{{ p.equipamentos.headers.equipamento }}</th>
-              <th>{{ p.equipamentos.headers.quantidade }}</th>
-              <th>{{ p.equipamentos.headers.empresa }}</th>
-              <th>{{ p.equipamentos.headers.modelo }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item, i) in p.equipamentos.items" :key="i">
-              <td>{{ item.equipamento }}</td>
-              <td>{{ item.quantidade }}</td>
-              <td>{{ item.empresa }}</td>
-              <td>{{ item.modelo }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 </template>
 
 <script setup>
@@ -141,41 +110,6 @@ const p = computed(() => lang.t.pesquisa)
 .topic-card--white { background: white; }
 .topic-title { font-size: 0.88rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
 .topic-desc  { font-size: 0.8rem; color: var(--color-text-subtle); line-height: 1.6; }
-
-.equip-container { max-width: 1080px; }
-.equip-sub { max-width: 720px; }
-
-.equip-table-wrap {
-  margin-top: 32px;
-  overflow-x: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: white;
-}
-.equip-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-}
-.equip-table th {
-  text-align: left;
-  padding: 14px 20px;
-  background: var(--color-bg-soft);
-  color: var(--color-text-subtle);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--color-border);
-  white-space: nowrap;
-}
-.equip-table td {
-  padding: 12px 20px;
-  border-bottom: 1px solid #EAF0FA;
-  color: var(--color-text);
-}
-.equip-table tbody tr:last-child td { border-bottom: none; }
-.equip-table tbody tr:hover { background: #FAFBFD; }
 
 @media (max-width: 900px) {
   .res-layout, .res-layout--rev { grid-template-columns: 1fr; }

@@ -27,6 +27,13 @@
           <div class="pub-year">{{ p.year }}</div>
           <div class="pub-body">
             <div class="pub-title">{{ p.title }}</div>
+            <a
+              v-if="p.doi"
+              :href="`https://doi.org/${p.doi}`"
+              target="_blank"
+              rel="noopener"
+              class="pub-doi"
+            >DOI: {{ p.doi }}</a>
             <div class="pub-venue">{{ p.venue }}</div>
             <div class="pub-authors">{{ p.authors }}</div>
           </div>
@@ -144,6 +151,14 @@ const filteredPubs = computed(() =>
 
 .pub-year { font-family: var(--font-serif); font-size: 0.92rem; font-weight: 700; color: var(--color-primary); padding-top: 2px; }
 .pub-title { font-size: 0.93rem; font-weight: 600; color: var(--color-text); line-height: 1.55; margin-bottom: 6px; }
+.pub-doi {
+  display: inline-block;
+  font-size: 0.76rem;
+  color: var(--color-primary-mid);
+  margin-bottom: 6px;
+  transition: color 0.18s;
+}
+.pub-doi:hover { color: var(--color-primary); text-decoration: underline; }
 .pub-venue { font-size: 0.8rem; color: var(--color-text-subtle); margin-bottom: 3px; font-style: italic; }
 .pub-authors { font-size: 0.76rem; color: var(--color-text-faint); }
 .pub-type { padding-top: 2px; display: flex; justify-content: flex-end; }

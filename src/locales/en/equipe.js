@@ -85,6 +85,12 @@ export default {
           lattes: 'http://lattes.cnpq.br/5972583538628463',
           img: 'assets/imgs/equipe/christianFoto.jpg',
         },
+        {
+          name: 'Bruno Faus Salussolia',
+          bio: 'Graduated in Electronic Engineering from the Federal University of Itajubá. FAPEMIG scholarship holder in the Graduate Program in Electrical Engineering at the Federal University of Itajubá.',
+          lattes: 'http://lattes.cnpq.br/2122525022134762',
+          img: 'assets/imgs/equipe/BrunoFausSalussolia.jpeg',
+        },
       ],
     },
     {
@@ -115,18 +121,6 @@ export default {
           lattes: 'Lattes não disponível',
           img: 'assets/imgs/equipe/RafaelaSilva.png',
         },
-        {
-          name: 'Beatriz Aparecida Pereira Silva',
-          bio: 'Description not available',
-          lattes: 'Lattes não disponível',
-          img: 'assets/imgs/equipe/BeatrizSilva.png',
-        },
-        {
-          name: 'Tamiris Midori Nakano',
-          bio: 'Description not available',
-          lattes: 'Lattes não disponível',
-          img: 'assets/imgs/equipe/TamirisNakano.png',
-        },
       ],
     },
     {
@@ -153,7 +147,7 @@ export default {
         },
         {
           name: 'Jean Wellington de Souza',
-          bio: 'Currently pursuing a master\'s in Electrical Engineering with an emphasis on Microelectronics at the Federal University of Itajubá (UNIFEI). Graduated in Electrical Engineering from Centro Universitário de Itajubá - FEPI (2016-2020). Has experience developing Internet of Things solutions and applications, working mainly in energy monitoring and data acquisition.',
+          bio: 'Master in Electrical Engineering from the Federal University of Itajubá - UNIFEI (2021-2024), graduated in Electrical Engineering from Centro Universitário de Itajubá - FEPI (2016-2020), currently an embedded firmware developer at CCK Automação and a student in the federal government\'s CI Digital training program. Has experience developing Internet of Things (IoT) solutions and applications, focused on energy monitoring and data acquisition. Works with embedded systems for electric energy management and metering, including firmware development and communication protocol integration for the analysis, supervision and control of energy metering systems.',
           lattes: 'http://lattes.cnpq.br/3095597034461611',
           img: 'assets/imgs/equipe/jean.jpg',
         },

@@ -15,9 +15,6 @@
     </div>
   </section>
 
-  <!-- Evento -->
-  <EventSection />
-
   <!-- Research areas -->
   <section class="section section--white">
     <div class="container">
@@ -63,7 +60,6 @@ import { RouterLink } from 'vue-router'
 import { useLangStore } from '../stores/lang.js'
 import HeroCarousel from '../components/HeroCarousel.vue'
 import SectionHeader from '../components/SectionHeader.vue'
-import EventSection from '../components/EventSection.vue'
 
 const lang = useLangStore()
 const h = computed(() => lang.t.home)

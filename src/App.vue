@@ -4,7 +4,7 @@
     <RouterView />
   </main>
   <TheFooter />
-  <EventPopup />
+  <BookingPopup />
 </template>
 
 <script setup>
@@ -12,7 +12,7 @@ import { onMounted, onBeforeUnmount } from 'vue'
 import { RouterView } from 'vue-router'
 import TheNavbar from './components/TheNavbar.vue'
 import TheFooter from './components/TheFooter.vue'
-import EventPopup from './components/EventPopup.vue'
+import BookingPopup from './components/BookingPopup.vue'
 import { useUiStore } from './stores/ui.js'
 
 const ui = useUiStore()

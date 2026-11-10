@@ -2,8 +2,8 @@
   <Teleport to="body">
     <Transition name="event-fade">
       <div v-if="open" class="event-overlay" @click.self="close">
-        <div class="event-modal" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
-          <button class="event-modal__close" :aria-label="ev.close" @click="close">&times;</button>
+        <div class="event-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+          <button class="event-modal__close" :aria-label="bk.close" @click="close">&times;</button>
 
           <header class="event-modal__head">
             <div class="event-modal__logos">
@@ -11,11 +11,9 @@
               <span class="event-modal__divider"></span>
               <img :src="unifeiLogo" alt="UNIFEI" class="event-modal__logo event-modal__logo--unifei" />
             </div>
-            <span class="event-modal__tag">{{ ev.tag }}</span>
-            <h2 id="event-modal-title" class="event-modal__title">
-              <span class="event-modal__edition">{{ ev.edition }}</span>
-              {{ ev.title }}
-            </h2>
+            <span class="event-modal__tag">{{ bk.tag }}</span>
+            <h2 id="booking-modal-title" class="event-modal__title">{{ bk.title }}</h2>
+            <p class="event-modal__intro">{{ bk.intro }}</p>
           </header>
 
           <div class="event-modal__body">
@@ -25,41 +23,55 @@
                   <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
                 </span>
                 <div>
-                  <span class="event-modal__label">{{ ev.dateLabel }}</span>
-                  <strong>{{ ev.date }}</strong>
+                  <span class="event-modal__label">{{ bk.step1Label }}</span>
+                  <strong>{{ bk.step1 }}</strong>
                 </div>
               </li>
               <li>
                 <span class="event-modal__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
                 </span>
                 <div>
-                  <span class="event-modal__label">{{ ev.placeLabel }}</span>
-                  <strong>{{ ev.place }}</strong>
+                  <span class="event-modal__label">{{ bk.step2Label }}</span>
+                  <strong>{{ bk.step2 }}</strong>
                 </div>
               </li>
               <li>
                 <span class="event-modal__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" /></svg>
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
                 </span>
                 <div>
-                  <span class="event-modal__label">{{ ev.venueLabel }}</span>
-                  <strong>{{ ev.venue }}</strong>
+                  <span class="event-modal__label">{{ bk.step3Label }}</span>
+                  <strong>{{ bk.step3 }}</strong>
                 </div>
               </li>
             </ul>
-            <button class="btn-dark event-modal__cta" @click="close">{{ ev.close }}</button>
+            <a
+              class="btn-dark event-modal__cta"
+              :href="BOOKING_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+              @click="close"
+            >{{ bk.cta }}</a>
+            <button class="event-modal__later" @click="close">{{ bk.later }}</button>
           </div>
         </div>
       </div>
     </Transition>
 
     <Transition name="event-badge">
-      <button v-if="!open" class="event-badge" :aria-label="ev.badgeAria" @click="show">
+      <a
+        v-if="!open"
+        class="event-badge"
+        :href="BOOKING_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        :aria-label="bk.badgeAria"
+      >
         <img :src="labtelLogo" alt="" class="event-badge__logo" />
-        <span class="event-badge__text">{{ ev.badge }}</span>
+        <span class="event-badge__text">{{ bk.badge }}</span>
         <span class="event-badge__pulse" aria-hidden="true"></span>
-      </button>
+      </a>
     </Transition>
   </Teleport>
 </template>
@@ -71,13 +83,16 @@ import { useUiStore } from '../stores/ui.js'
 import labtelLogo from '../assets/imgs/Logo1.png'
 import unifeiLogo from '../assets/imgs/EFEI_logo.png'
 
+// Agenda pública (Google Calendar – página de agendamento) para reservar o laboratório.
+const BOOKING_URL =
+  'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2o8MUX3CATmCaS-chO-s5lDk35_YEaA3FBl6SQtqtaQIOQtcQTKnZ8h4rUtMSmX9wdt7h64Tnr'
+
 const lang = useLangStore()
-const ev = computed(() => lang.t.event)
+const bk = computed(() => lang.t.booking)
 
 const ui = useUiStore()
-const open = computed(() => ui.eventOpen)
-const show = ui.openEvent
-const close = ui.closeEvent
+const open = computed(() => ui.bookingOpen)
+const close = ui.closeBooking
 
 function onKey(e) {
   if (e.key === 'Escape' && open.value) close()
@@ -192,11 +207,12 @@ onBeforeUnmount(() => {
   line-height: 1.25;
   color: white;
 }
-.event-modal__edition {
-  display: block;
-  font-size: 2.6rem;
-  color: #8FD3F7; /* azul-claro do símbolo LabTel */
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+.event-modal__intro {
+  margin: 10px auto 0;
+  max-width: 400px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .event-modal__body { padding: 26px 32px 30px; }
@@ -245,9 +261,24 @@ onBeforeUnmount(() => {
   color: var(--color-text);
 }
 .event-modal__cta {
+  display: block;
   width: 100%;
   text-align: center;
+  text-decoration: none;
 }
+.event-modal__later {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-subtle);
+  cursor: pointer;
+}
+.event-modal__later:hover { color: var(--color-text); text-decoration: underline; }
 
 /* ── Floating badge ── */
 .event-badge {
@@ -266,6 +297,7 @@ onBeforeUnmount(() => {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: 0 10px 28px rgba(0, 51, 102, 0.35);
   transition: transform var(--transition), box-shadow var(--transition);
@@ -329,7 +361,6 @@ onBeforeUnmount(() => {
   .event-modal__logo--labtel { height: 48px; }
   .event-modal__logo--unifei { width: 48px; }
   .event-modal__tag { margin-bottom: 6px; }
-  .event-modal__edition { font-size: 2rem; }
   .event-modal__title { font-size: 1.35rem; }
   .event-modal__body { padding: 18px 24px 20px; }
   .event-modal__info { gap: 10px; margin-bottom: 18px; }
